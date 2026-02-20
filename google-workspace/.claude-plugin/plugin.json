@@ -1,0 +1,7 @@
+{
+  "name": "google-workspace",
+  "description": "Interact with Google Workspace using the gogcli CLI. Manage Gmail, Calendar, Drive, Contacts, and Tasks directly from Claude Code.",
+  "author": {
+    "name": "ppawlik"
+  }
+}

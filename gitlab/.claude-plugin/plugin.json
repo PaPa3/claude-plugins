@@ -1,0 +1,7 @@
+{
+  "name": "gitlab",
+  "description": "Interact with GitLab using the glab CLI. Manage merge requests, issues, CI pipelines, and repositories directly from Claude Code.",
+  "author": {
+    "name": "ppawlik"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "langsmith",
+  "description": "Connect to LangSmith for LLM observability and tracing. Browse runs, datasets, prompts, and experiments directly from Claude Code.",
+  "author": {
+    "name": "ppawlik"
+  }
+}
