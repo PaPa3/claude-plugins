@@ -6,9 +6,9 @@ Personal Claude Code plugins repository.
 
 | Plugin | Description | Requires |
 |--------|-------------|---------|
-| [langsmith](./langsmith/) | LangSmith observability — browse runs, prompts, datasets, experiments | `uvx`, `LANGSMITH_API_KEY` |
-| [gitlab](./gitlab/) | GitLab — MRs, issues, CI pipelines, API | `glab` CLI |
-| [google-workspace](./google-workspace/) | Google Workspace — Gmail, Calendar, Drive, Contacts, Tasks | `gogcli` CLI |
+| [langsmith](./plugins/langsmith/) | LangSmith observability — browse runs, prompts, datasets, experiments | `uvx`, `LANGSMITH_API_KEY` |
+| [gitlab](./plugins/gitlab/) | GitLab — MRs, issues, CI pipelines, API | `glab` CLI |
+| [google-workspace](./plugins/google-workspace/) | Google Workspace — Gmail, Calendar, Drive, Contacts, Tasks | `gog` CLI |
 
 ## Installation
 
@@ -42,10 +42,11 @@ Plugins installed from external marketplaces (not in this repo).
 Each plugin follows the standard Claude Code plugin layout:
 
 ```
-plugin-name/
-├── .claude-plugin/
-│   └── plugin.json      # plugin metadata
-├── .mcp.json            # MCP server config (if applicable)
-├── commands/            # slash commands
-└── skills/              # auto-invoked skills
+plugins/
+└── plugin-name/
+    ├── .claude-plugin/
+    │   └── plugin.json      # plugin metadata
+    ├── .mcp.json            # MCP server config (if applicable)
+    ├── commands/            # slash commands
+    └── skills/              # auto-invoked skills
 ```
