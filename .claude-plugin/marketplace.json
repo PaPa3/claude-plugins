@@ -1,0 +1,21 @@
+{
+  "name": "papa3-plugins",
+  "description": "Personal Claude Code plugins — LangSmith, GitLab, Google Workspace",
+  "plugins": [
+    {
+      "name": "langsmith",
+      "path": "plugins/langsmith",
+      "description": "LangSmith observability — browse runs, prompts, datasets, and experiments"
+    },
+    {
+      "name": "gitlab",
+      "path": "plugins/gitlab",
+      "description": "GitLab — manage MRs, issues, and CI pipelines via glab CLI"
+    },
+    {
+      "name": "google-workspace",
+      "path": "plugins/google-workspace",
+      "description": "Google Workspace — Gmail, Calendar, Drive, Contacts via gogcli"
+    }
+  ]
+}
