@@ -21,48 +21,59 @@ gog auth accounts      # list configured accounts
 
 ### Gmail
 ```bash
-gog gmail search <query>                            # search emails/threads
-gog gmail get <messageId>                           # read a message (aliases: info, show)
+gog gmail search <query>                   # search threads (aliases: find, query, ls, list)
+gog gmail search <query> --max=20          # limit results (default: 10)
+gog gmail get <messageId>                  # read a message (aliases: info, show)
 gog gmail send --to=<email> --subject=<subj> --body=<body>
-gog gmail labels list                               # list labels
+gog gmail send --to=<email> --subject=<subj> --body=<body> --reply-to-message-id=<id>
+gog gmail labels list                      # list labels
 ```
 
 ### Google Calendar
 ```bash
-gog calendar events [<calendarId>]                  # list events (aliases: list, ls)
-gog calendar events --min=<date> --max=<date>       # filter by date range
-gog calendar event <calendarId> <eventId>           # get event details (aliases: get, info, show)
-gog calendar calendars                              # list all calendars
+gog calendar events                        # list upcoming events from primary calendar (aliases: list, ls)
+gog calendar events --from=today --to=tomorrow    # filter by date range
+gog calendar events --days=7               # next N days
+gog calendar events --today                # today only
+gog calendar events --week                 # this week
+gog calendar events --all                  # all calendars
+gog calendar events --query=<text>         # free-text search
+gog calendar event <calendarId> <eventId>  # get event details (aliases: get, info, show)
+gog calendar calendars                     # list all calendars
 ```
 
 ### Google Drive
 ```bash
-gog drive ls [--folder=<id>]                        # list files in root or folder
-gog drive search <query>                            # full-text search (aliases: find)
-gog drive get <fileId>                              # get file metadata
-gog drive download <fileId> [--output=<path>]       # download file (aliases: dl)
-gog drive upload <localPath> [--folder=<id>] [--name=<name>]   # upload file (aliases: up, put)
-gog drive delete <fileId>                           # delete file
+gog drive ls                               # list files in root
+gog drive ls --parent=<folderId>           # list files in specific folder
+gog drive ls --query=<driveQuery>          # filter with Drive query language
+gog drive search <query>                   # full-text search across Drive (aliases: find)
+gog drive get <fileId>                     # get file metadata
+gog drive download <fileId>                # download file (aliases: dl)
+gog drive download <fileId> --output=<path>
+gog drive upload <localPath>               # upload to root (aliases: up, put)
+gog drive upload <localPath> --parent=<folderId> --name=<name>
+gog drive delete <fileId>                  # move to trash (aliases: rm, del)
 ```
 
 ### Google Contacts
 ```bash
-gog contacts list                                   # list contacts (aliases: ls)
-gog contacts search <query>                         # search by name/email/phone
-gog contacts get <resourceName>                     # get contact details (aliases: info, show)
+gog contacts list                          # list contacts (aliases: ls)
+gog contacts search <query>                # search by name/email/phone
+gog contacts get <resourceName>            # get contact details (aliases: info, show)
 gog contacts create --name=<name> --email=<email>   # create contact (aliases: add, new)
-gog contacts update <resourceName> [flags]          # update contact (aliases: edit, set)
-gog contacts delete <resourceName>                  # delete contact (aliases: rm, del)
+gog contacts update <resourceName> [flags] # update contact (aliases: edit, set)
+gog contacts delete <resourceName>         # delete contact (aliases: rm, del)
 ```
 
 ### Google Tasks
 ```bash
-gog tasks lists                                     # list all task lists
-gog tasks list <tasklistId>                         # list tasks in a list (aliases: ls)
-gog tasks get <tasklistId> <taskId>                 # get task details (aliases: info, show)
-gog tasks add <tasklistId> --title=<title> [--due=<date>]   # add task (aliases: create)
-gog tasks done <tasklistId> <taskId>                # mark task complete (aliases: complete)
-gog tasks update <tasklistId> <taskId> [flags]      # update task (aliases: edit, set)
+gog tasks lists list                       # list all task lists
+gog tasks list <tasklistId>                # list tasks in a list (aliases: ls)
+gog tasks get <tasklistId> <taskId>        # get task details (aliases: info, show)
+gog tasks add <tasklistId> --title=<title> [--due=YYYY-MM-DD] [--notes=<text>]
+gog tasks done <tasklistId> <taskId>       # mark task complete (aliases: complete)
+gog tasks update <tasklistId> <taskId> [flags]   # update task (aliases: edit, set)
 ```
 
 ### Google Docs / Sheets / Slides
@@ -82,19 +93,19 @@ gog slides list
 3. Summarize or act on the content
 
 ### Browse calendar events
-1. `gog calendar calendars` — list available calendars
-2. `gog calendar events --min=2026-02-21 --max=2026-02-28` — list upcoming events
+1. `gog calendar events --days=7` — next 7 days from primary calendar
+2. Or `gog calendar events --all --week` — all calendars, this week
 3. `gog calendar event <calendarId> <eventId>` — view full details
 
 ### Find a file in Drive
-1. `gog drive search "report"` — search Drive by name/content
+1. `gog drive search "report"` — full-text search across Drive
 2. `gog drive ls` — browse root folder
 3. `gog drive download <id>` — download if needed
 
 ### Manage tasks
-1. `gog tasks lists` — list all task lists
+1. `gog tasks lists list` — list all task lists
 2. `gog tasks list <tasklistId>` — list tasks
-3. `gog tasks add <tasklistId> --title="My task"` — add a task
+3. `gog tasks add <tasklistId> --title="My task" --due=2026-02-28` — add a task
 4. `gog tasks done <tasklistId> <taskId>` — mark complete
 
 ## Output Format
