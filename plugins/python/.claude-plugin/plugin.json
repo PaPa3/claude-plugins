@@ -1,0 +1,7 @@
+{
+  "name": "python",
+  "description": "Python tooling via uv and uvx. Run scripts, manage dependencies, and use Python tools without manual venv setup.",
+  "author": {
+    "name": "PaPa3"
+  }
+}

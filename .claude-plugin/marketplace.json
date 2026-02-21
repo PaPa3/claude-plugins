@@ -31,6 +31,15 @@
       "author": {
         "name": "PaPa3"
       }
+    },
+    {
+      "name": "python",
+      "source": "./plugins/python",
+      "description": "Python tooling via uv and uvx — run scripts, manage deps, use tools without manual venv setup",
+      "version": "1.0.0",
+      "author": {
+        "name": "PaPa3"
+      }
     }
   ]
 }

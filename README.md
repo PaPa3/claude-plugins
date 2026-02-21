@@ -9,6 +9,7 @@ Personal Claude Code plugins repository.
 | [langsmith](./plugins/langsmith/) | LangSmith observability — browse runs, prompts, datasets, experiments | `uvx`, `LANGSMITH_API_KEY` |
 | [gitlab](./plugins/gitlab/) | GitLab — MRs, issues, CI pipelines, API | `glab` CLI |
 | [google-workspace](./plugins/google-workspace/) | Google Workspace — Gmail, Calendar, Drive, Contacts, Tasks | `gog` CLI |
+| [python](./plugins/python/) | Python tooling — run scripts, manage deps, use tools | `uv`, `uvx` |
 
 ## Installation
 
