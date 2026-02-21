@@ -1,21 +1,36 @@
 {
   "name": "papa3-plugins",
-  "description": "Personal Claude Code plugins — LangSmith, GitLab, Google Workspace",
+  "owner": {
+    "name": "PaPa3",
+    "email": "pawelpawlik4@gmail.com"
+  },
   "plugins": [
     {
       "name": "langsmith",
-      "path": "plugins/langsmith",
-      "description": "LangSmith observability — browse runs, prompts, datasets, and experiments"
+      "source": "./plugins/langsmith",
+      "description": "LangSmith observability — browse runs, prompts, datasets, and experiments",
+      "version": "1.0.0",
+      "author": {
+        "name": "PaPa3"
+      }
     },
     {
       "name": "gitlab",
-      "path": "plugins/gitlab",
-      "description": "GitLab — manage MRs, issues, and CI pipelines via glab CLI"
+      "source": "./plugins/gitlab",
+      "description": "GitLab — manage MRs, issues, and CI pipelines via glab CLI",
+      "version": "1.0.0",
+      "author": {
+        "name": "PaPa3"
+      }
     },
     {
       "name": "google-workspace",
-      "path": "plugins/google-workspace",
-      "description": "Google Workspace — Gmail, Calendar, Drive, Contacts via gogcli"
+      "source": "./plugins/google-workspace",
+      "description": "Google Workspace — Gmail, Calendar, Drive, Contacts via gogcli",
+      "version": "1.0.0",
+      "author": {
+        "name": "PaPa3"
+      }
     }
   ]
 }
